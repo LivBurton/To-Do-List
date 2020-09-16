@@ -8,29 +8,28 @@
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/3116385fbd.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/3116385fbd.js" crossorigin="anonymous"></script>
 
   <style>
     .completed {
       text-decoration: line-through;
       background-color: hsl(252, 2%, 91%);
-      
     }
 
     .ticked {
       color: green;
     }
 
-    .crossed{
+    .crossed {
       color: red;
     }
 
     body {
       background-color: #8EC5FC;
       background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
-      
     }
-    html{
+
+    html {
       min-height: 100%;
     }
 
@@ -47,7 +46,6 @@
 
   <title>To-Do List</title>
 </head>
-<!-- class="bg-info" -->
 
 <body>
   <div class="container-fluid">
@@ -57,7 +55,7 @@
 
         <div class="form-group pt-3">
           <label for="task-input">Type in new task</label>
-          <input type="text" id="task-input" class="form-control">
+          <input type="text" id="task-input" class="form-control" maxlength="100">
         </div>
 
         <button class="btn btn-success mb-4" id="btn-add" type="submit">ADD</button>
@@ -70,17 +68,15 @@
 
         <div class="filter-tasks">
           <label for="filter-input">Filter tasks</label>
-          <input type="text" class="form-control" id="filter-input">
+          <input type="text" class="form-control" id="filter-input" maxlength="50">
         </div>
 
         <div id="list-container" class="task-list-container mt-4 pb-4">
           <ul class="list-group mb-4" id="task-list">
-            <!-- <li class="list-group-item">Feed the cat</li> -->
-
 
           </ul>
           <button id="btn-clear" class="btn btn-danger">DELETE ALL</button>
-          <!-- <button id="btn-clear" class="btn btn-danger" data-toggle="popover" title = "Are you sure?">DELETE ALL</button> -->
+
         </div>
 
 
@@ -94,7 +90,7 @@
 
 
   <!-- SCRIPTS -->
-  
+
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
     crossorigin="anonymous"></script>
@@ -104,13 +100,20 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
-    <!-- <script>
+  <!-- <script>
       $(document).ready(function(){
         $('[data-toggle="popover"]').popover();
       });
       </script> -->
+  <script>
+    $(document).ready(function () {
+      $("#myModal").modal('show');
+    });
+  </script>
+
 
   <script src='app.js'></script>
+
 </body>
 
 </html>
